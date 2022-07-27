@@ -216,7 +216,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!114 &235204881
 MonoBehaviour:
@@ -309,7 +309,7 @@ PrefabInstance:
         type: 3}
       propertyPath: StartingWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 7338874816144303549, guid: 9ad85ed03dd235942b2adc76c21e7c44,
+      objectReference: {fileID: 958623517967530291, guid: 8e2c4aefe0d2464448f48127f64f5d87,
         type: 3}
     - target: {fileID: 7912913030387480581, guid: b30a53312927b31418602a1885fa013e,
         type: 3}
@@ -850,7 +850,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &884827885
 GameObject:
@@ -1259,7 +1259,7 @@ PrefabInstance:
     - target: {fileID: 7767878615793181663, guid: 2ddc2649c78c6444693f884b0d676ad5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7767878615793181663, guid: 2ddc2649c78c6444693f884b0d676ad5,
         type: 3}
