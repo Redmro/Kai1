@@ -180,7 +180,7 @@ MonoBehaviour:
   WeaponAnimator: {fileID: 0}
   MuzzleFlashPrefab: {fileID: 0}
   UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 0}
+  ShootSfx: {fileID: 8300000, guid: 03f8dfe8ec9e56643a5e2e5f4da1304d, type: 3}
   ChangeWeaponSfx: {fileID: 0}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}
@@ -376,8 +376,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5606739737956196649}
   m_LocalRotation: {x: -0, y: -0.70710707, z: -0, w: 0.7071066}
-  m_LocalPosition: {x: 0.000000049356, y: 0.0018587, z: -0.6121}
-  m_LocalScale: {x: 2.6149335, y: 4.533047, z: 4.533047}
+  m_LocalPosition: {x: 0, y: 0.0018587, z: -0.317}
+  m_LocalScale: {x: 0.99846256, y: 4.533047, z: 4.533047}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5609865975273991671}
