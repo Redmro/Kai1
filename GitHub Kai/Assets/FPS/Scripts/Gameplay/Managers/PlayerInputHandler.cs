@@ -24,6 +24,10 @@ namespace Unity.FPS.Gameplay
         PlayerCharacterController m_PlayerCharacterController;
         bool m_FireInputWasHeld;
 
+        private Vector3 move = Vector3.zero;
+
+        public bool isRespawning = false;
+
         void Start()
         {
             m_PlayerCharacterController = GetComponent<PlayerCharacterController>();
@@ -43,20 +47,31 @@ namespace Unity.FPS.Gameplay
 
         public bool CanProcessInput()
         {
-            return Cursor.lockState == CursorLockMode.Locked && !m_GameFlowManager.GameIsEnding;
+            return Cursor.lockState == CursorLockMode.Locked && !m_GameFlowManager.GameIsEnding && !isRespawning;
         }
 
         public Vector3 GetMoveInput()
         {
             if (CanProcessInput())
             {
-                Vector3 move = new Vector3(Input.GetAxisRaw(GameConstants.k_AxisNameHorizontal), 0f,
+                move = new Vector3(Input.GetAxisRaw(GameConstants.k_AxisNameHorizontal), 0f,
                     Input.GetAxisRaw(GameConstants.k_AxisNameVertical));
 
                 // constrain move input to a maximum magnitude of 1, otherwise diagonal movement might exceed the max move speed defined
                 move = Vector3.ClampMagnitude(move, 1);
 
                 return move;
+            }
+
+            return Vector3.zero;
+        }
+
+        public Vector3 GetDashInput()
+        {
+            // Return move direction
+            if (CanProcessInput() && Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                return move.normalized;
             }
 
             return Vector3.zero;

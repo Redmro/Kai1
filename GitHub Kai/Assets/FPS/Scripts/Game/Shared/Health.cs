@@ -83,5 +83,10 @@ namespace Unity.FPS.Game
                 OnDie?.Invoke();
             }
         }
+        public void ToggleDeath(bool option)
+        {
+            m_IsDead = option;
+        }
     }
+
 }

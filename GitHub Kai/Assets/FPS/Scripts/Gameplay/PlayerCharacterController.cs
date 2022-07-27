@@ -1,4 +1,6 @@
-﻿using Unity.FPS.Game;
+﻿using System.Collections;
+using Unity.FPS.Game;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,13 +9,15 @@ namespace Unity.FPS.Gameplay
     [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
     public class PlayerCharacterController : MonoBehaviour
     {
-        [Header("References")] [Tooltip("Reference to the main camera used for the player")]
+        [Header("References")]
+        [Tooltip("Reference to the main camera used for the player")]
         public Camera PlayerCamera;
 
         [Tooltip("Audio source for footsteps, jump, etc...")]
         public AudioSource AudioSource;
 
-        [Header("General")] [Tooltip("Force applied downward when in the air")]
+        [Header("General")]
+        [Tooltip("Force applied downward when in the air")]
         public float GravityDownForce = 20f;
 
         [Tooltip("Physic layers checked to consider the player grounded")]
@@ -22,14 +26,16 @@ namespace Unity.FPS.Gameplay
         [Tooltip("distance from the bottom of the character controller capsule to test for grounded")]
         public float GroundCheckDistance = 0.05f;
 
-        [Header("Movement")] [Tooltip("Max movement speed when grounded (when not sprinting)")]
+        [Header("Movement")]
+        [Tooltip("Max movement speed when grounded (when not sprinting)")]
         public float MaxSpeedOnGround = 10f;
 
         [Tooltip(
             "Sharpness for the movement when grounded, a low value will make the player accelerate and decelerate slowly, a high value will do the opposite")]
         public float MovementSharpnessOnGround = 15;
 
-        [Tooltip("Max movement speed when crouching")] [Range(0, 1)]
+        [Tooltip("Max movement speed when crouching")]
+        [Range(0, 1)]
         public float MaxSpeedCrouchedRatio = 0.5f;
 
         [Tooltip("Max movement speed when not grounded")]
@@ -44,16 +50,20 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Height at which the player dies instantly when falling off the map")]
         public float KillHeight = -50f;
 
-        [Header("Rotation")] [Tooltip("Rotation speed for moving the camera")]
+        [Header("Rotation")]
+        [Tooltip("Rotation speed for moving the camera")]
         public float RotationSpeed = 200f;
 
-        [Range(0.1f, 1f)] [Tooltip("Rotation speed multiplier when aiming")]
+        [Range(0.1f, 1f)]
+        [Tooltip("Rotation speed multiplier when aiming")]
         public float AimingRotationMultiplier = 0.4f;
 
-        [Header("Jump")] [Tooltip("Force applied upward when jumping")]
+        [Header("Jump")]
+        [Tooltip("Force applied upward when jumping")]
         public float JumpForce = 9f;
 
-        [Header("Stance")] [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
+        [Header("Stance")]
+        [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
         public float CameraHeightRatio = 0.9f;
 
         [Tooltip("Height of character when standing")]
@@ -65,7 +75,8 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Speed of crouching transitions")]
         public float CrouchingSharpness = 10f;
 
-        [Header("Audio")] [Tooltip("Amount of footstep sounds played when moving one meter")]
+        [Header("Audio")]
+        [Tooltip("Amount of footstep sounds played when moving one meter")]
         public float FootstepSfxFrequency = 1f;
 
         [Tooltip("Amount of footstep sounds played when moving one meter while sprinting")]
@@ -96,6 +107,10 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Damage recieved when falling at the maximum speed")]
         public float FallDamageAtMaxSpeed = 50f;
 
+        [Tooltip("Cooldown for dash")]
+        public float dashCooldown = 1.5f;
+
+
         public UnityAction<bool> OnStanceChanged;
 
         public Vector3 CharacterVelocity { get; set; }
@@ -103,6 +118,7 @@ namespace Unity.FPS.Gameplay
         public bool HasJumpedThisFrame { get; private set; }
         public bool IsDead { get; private set; }
         public bool IsCrouching { get; private set; }
+
 
         public float RotationMultiplier
         {
@@ -117,6 +133,12 @@ namespace Unity.FPS.Gameplay
             }
         }
 
+        [Header("Dash Values")]
+        public float dashDuration = 1f;
+        public float dashSpeed = 2f;
+
+        public bool IsDashing { get; private set; }
+
         Health m_Health;
         PlayerInputHandler m_InputHandler;
         CharacterController m_Controller;
@@ -124,20 +146,69 @@ namespace Unity.FPS.Gameplay
         Actor m_Actor;
         Vector3 m_GroundNormal;
         Vector3 m_CharacterVelocity;
+        Vector3 m_CharacterVelocityMomentum;
         Vector3 m_LatestImpactSpeed;
         float m_LastTimeJumped = 0f;
         float m_CameraVerticalAngle = 0f;
         float m_FootstepDistanceCounter;
         float m_TargetCharacterHeight;
 
+        // Dash Direction
+        Vector3 m_dashDirection;
+
+        Vector3 realDDirection;
+
         const float k_JumpGroundingPreventionTime = 0.2f;
         const float k_GroundCheckDistanceInAir = 0.07f;
+
+        [Header("Teleport")]
+        public Transform spawnPoint;
+
+        [Header("Lifes")]
+        public int lifes = 3;
+
+        public float respawnTimer = 3f;
+        bool triggerRespawn = false;
+        bool dashIsCoolingDown = false;
+
+        [Header("Hookshot")]
+        private State state;
+        private Vector3 hookshotPosition;
+        private float hookshotSize;
+        public float hookshotThrowSpeed = 5f;
+        public Transform debugHitPointTransform;
+        public Transform hookshotTransform;
+
+        public float hookshotSpeedMultiplier = 5f;
+        public float m_MomentumExtraSpeed = 2f;
+
+        private float targetFov;
+        private float fov;
+        public ParticleSystem speedLinesParticleSystem;
+
+        private const float NORMAL_FOV = 60f;
+        private const float HOOKSHOT_FOV = 100f;
+
+
+        private enum State
+        {
+            Normal,
+            HookshotThrown,
+            HookshotFlyingPlayer,
+        }
 
         void Awake()
         {
             ActorsManager actorsManager = FindObjectOfType<ActorsManager>();
             if (actorsManager != null)
                 actorsManager.SetPlayer(gameObject);
+            state = State.Normal;
+            hookshotTransform.gameObject.SetActive(false);
+
+            //speedLinesParticleSystem = FindObjectOfType<ParticleSystem>();
+
+            targetFov = PlayerCamera.fieldOfView;
+            fov = targetFov;
         }
 
         void Start()
@@ -172,58 +243,145 @@ namespace Unity.FPS.Gameplay
 
         void Update()
         {
-            // check for Y kill
-            if (!IsDead && transform.position.y < KillHeight)
+            float fovSpeed = 4f;
+            fov = Mathf.Lerp(fov, targetFov, Time.deltaTime * fovSpeed);
+            PlayerCamera.fieldOfView = fov;
+
+            switch (state)
             {
-                m_Health.Kill();
+                default:
+                case State.Normal:
+
+                    // check for Y kill
+                    if (!IsDead && transform.position.y < KillHeight)
+                    {
+                        m_Health.Kill();
+                    }
+
+                    HasJumpedThisFrame = false;
+
+                    bool wasGrounded = IsGrounded;
+                    GroundCheck();
+
+                    // landing
+                    if (IsGrounded && !wasGrounded)
+                    {
+                        AudioSource.PlayOneShot(FallDamageSfx);
+                        // Fall damage
+                        /*float fallSpeed = -Mathf.Min(CharacterVelocity.y, m_LatestImpactSpeed.y);
+                        float fallSpeedRatio = (fallSpeed - MinSpeedForFallDamage) /
+                                               (MaxSpeedForFallDamage - MinSpeedForFallDamage);*/
+                        /*if (RecievesFallDamage && fallSpeedRatio > 0f)
+                        {
+                            float dmgFromFall = Mathf.Lerp(FallDamageAtMinSpeed, FallDamageAtMaxSpeed, fallSpeedRatio);
+                            m_Health.TakeDamage(dmgFromFall, null);
+
+                            // fall damage SFX
+                            AudioSource.PlayOneShot(FallDamageSfx);
+                        }
+                        else
+                        {
+                            // land SFX
+                            AudioSource.PlayOneShot(LandSfx);
+                        }*/
+                    }
+
+                    if (triggerRespawn && respawnTimer >= 0)
+                    {
+                        m_InputHandler.isRespawning = true;
+                        respawnTimer -= Time.deltaTime;
+
+                        if (respawnTimer <= 0)
+                        {
+                            TimeTravel();
+                            triggerRespawn = false;
+                            respawnTimer = 3f;
+                        }
+                    }
+
+                    if (dashIsCoolingDown)
+                    {
+                        dashCooldown -= Time.deltaTime;
+                    }
+
+                    if (dashCooldown <= 0)
+                    {
+                        dashCooldown = 1.5f;
+                        dashIsCoolingDown = false;
+                    }
+
+                    // crouching
+                    if (m_InputHandler.GetCrouchInputDown())
+                    {
+                        SetCrouchingState(!IsCrouching, false);
+                    }
+
+                    UpdateCharacterHeight(false);
+
+                    HandleCharacterMovement();
+
+                    // Dashing
+                    Vector3 dashInput = m_InputHandler.GetDashInput();
+                    if (dashInput != Vector3.zero && !dashIsCoolingDown)
+                    {
+                        m_dashDirection = dashInput;
+                        StartCoroutine(Dash());
+                    }
+
+                    HandleHookShotStart();
+                    break;
+                case State.HookshotThrown:
+                    HandleHookshotThrow();
+                    CameraMovement();
+                    HandleCharacterMovement();
+                    break;
+                case State.HookshotFlyingPlayer:
+                    CameraMovement();
+                    HandleHookshotMovement();
+                    break;
             }
+        }
 
-            HasJumpedThisFrame = false;
+        private IEnumerator Dash()
+        {
+            float timer = 0f;
+            dashIsCoolingDown = true;
 
-            bool wasGrounded = IsGrounded;
-            GroundCheck();
-
-            // landing
-            if (IsGrounded && !wasGrounded)
+            while (timer < dashDuration)
             {
-                // Fall damage
-                float fallSpeed = -Mathf.Min(CharacterVelocity.y, m_LatestImpactSpeed.y);
-                float fallSpeedRatio = (fallSpeed - MinSpeedForFallDamage) /
-                                       (MaxSpeedForFallDamage - MinSpeedForFallDamage);
-                if (RecievesFallDamage && fallSpeedRatio > 0f)
+                if (m_dashDirection.x != 0)
                 {
-                    float dmgFromFall = Mathf.Lerp(FallDamageAtMinSpeed, FallDamageAtMaxSpeed, fallSpeedRatio);
-                    m_Health.TakeDamage(dmgFromFall, null);
-
-                    // fall damage SFX
-                    AudioSource.PlayOneShot(FallDamageSfx);
+                    m_Controller.Move(transform.right * m_dashDirection.x * dashSpeed * Time.deltaTime);
                 }
-                else
+
+                if (m_dashDirection.z != 0)
                 {
-                    // land SFX
-                    AudioSource.PlayOneShot(LandSfx);
+                    m_Controller.Move(transform.forward * m_dashDirection.z * dashSpeed * Time.deltaTime);
                 }
+                timer += Time.deltaTime;
+                yield return null;
             }
-
-            // crouching
-            if (m_InputHandler.GetCrouchInputDown())
-            {
-                SetCrouchingState(!IsCrouching, false);
-            }
-
-            UpdateCharacterHeight(false);
-
-            HandleCharacterMovement();
         }
 
         void OnDie()
         {
-            IsDead = true;
+            lifes--;
 
-            // Tell the weapons manager to switch to a non-existing weapon in order to lower the weapon
-            m_WeaponsManager.SwitchToWeaponIndex(-1, true);
+            if (lifes > 0 && respawnTimer >= 0f)
+            {
+                triggerRespawn = true;
+            }
 
-            EventManager.Broadcast(Events.PlayerDeathEvent);
+            else if (lifes <= 0)
+            {
+                IsDead = true;
+
+                // Tell the weapons manager to switch to a non-existing weapon in order to lower the weapon
+                m_WeaponsManager.SwitchToWeaponIndex(-1, true);
+
+                EventManager.Broadcast(Events.PlayerDeathEvent);
+            }
+
         }
 
         void GroundCheck()
@@ -266,25 +424,7 @@ namespace Unity.FPS.Gameplay
 
         void HandleCharacterMovement()
         {
-            // horizontal character rotation
-            {
-                // rotate the transform with the input speed around its local Y axis
-                transform.Rotate(
-                    new Vector3(0f, (m_InputHandler.GetLookInputsHorizontal() * RotationSpeed * RotationMultiplier),
-                        0f), Space.Self);
-            }
-
-            // vertical camera rotation
-            {
-                // add vertical inputs to the camera's vertical angle
-                m_CameraVerticalAngle += m_InputHandler.GetLookInputsVertical() * RotationSpeed * RotationMultiplier;
-
-                // limit the camera's vertical angle to min/max
-                m_CameraVerticalAngle = Mathf.Clamp(m_CameraVerticalAngle, -89f, 89f);
-
-                // apply the vertical angle as a local rotation to the camera transform along its right axis (makes it pivot up and down)
-                PlayerCamera.transform.localEulerAngles = new Vector3(m_CameraVerticalAngle, 0, 0);
-            }
+            CameraMovement();
 
             // character movement handling
             bool isSprinting = m_InputHandler.GetSprintInputHeld();
@@ -298,6 +438,7 @@ namespace Unity.FPS.Gameplay
 
                 // converts move input to a worldspace vector based on our character's transform orientation
                 Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
+
 
                 // handle grounded movement
                 if (IsGrounded)
@@ -315,7 +456,7 @@ namespace Unity.FPS.Gameplay
                         MovementSharpnessOnGround * Time.deltaTime);
 
                     // jumping
-                    if (IsGrounded && m_InputHandler.GetJumpInputDown())
+                    if (IsGrounded && TestInputJump())
                     {
                         // force the crouch state to false
                         if (SetCrouchingState(false, false))
@@ -355,7 +496,21 @@ namespace Unity.FPS.Gameplay
                 else
                 {
                     // add air acceleration
-                    CharacterVelocity += worldspaceMoveInput * AccelerationSpeedInAir * Time.deltaTime;
+                    CharacterVelocity += (worldspaceMoveInput * AccelerationSpeedInAir * Time.deltaTime) + m_CharacterVelocityMomentum;
+
+                    //Apply momentum
+                    //CharacterVelocity += m_CharacterVelocityMomentum;
+
+                    //Dampen momentum
+                    if (m_CharacterVelocityMomentum.magnitude >= 0f)
+                    {
+                        float momentumDrag = 15f;
+                        m_CharacterVelocityMomentum -= m_CharacterVelocityMomentum * momentumDrag * Time.deltaTime;
+                        if (m_CharacterVelocityMomentum.magnitude <= .0f)
+                        {
+                            m_CharacterVelocityMomentum = Vector3.zero;
+                        }
+                    }
 
                     // limit air speed to a maximum, but only horizontally
                     float verticalVelocity = CharacterVelocity.y;
@@ -367,6 +522,7 @@ namespace Unity.FPS.Gameplay
                     CharacterVelocity += Vector3.down * GravityDownForce * Time.deltaTime;
                 }
             }
+
 
             // apply the final calculated velocity value as a character movement
             Vector3 capsuleBottomBeforeMove = GetCapsuleBottomHemisphere();
@@ -473,5 +629,147 @@ namespace Unity.FPS.Gameplay
             IsCrouching = crouched;
             return true;
         }
+
+        public void TimeTravel()
+        {
+            this.gameObject.transform.position = spawnPoint.position;
+            Health playerHealth = gameObject.GetComponent<Health>();
+            if (playerHealth)
+            {
+                playerHealth.Heal(999);
+                playerHealth.ToggleDeath(false);
+            }
+
+            m_InputHandler.isRespawning = false;
+
+        }
+
+        public void SetTimeTravelPoint(Transform newSpawnPoint)
+        {
+            spawnPoint = newSpawnPoint;
+        }
+
+        private void ResetGravityEffect()
+        {
+            CharacterVelocity = new Vector3(CharacterVelocity.x, 0f, CharacterVelocity.z);
+        }
+
+        private void HandleHookShotStart()
+        {
+            if (TestInputDownHookshot())
+            {
+                if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.forward, out RaycastHit raycastHit))
+                {
+                    //isSprinting = false;
+                    debugHitPointTransform.position = raycastHit.point;
+                    hookshotPosition = raycastHit.point;
+                    hookshotSize = 0f;
+                    hookshotTransform.gameObject.SetActive(true);
+                    hookshotTransform.localScale = Vector3.zero;
+                    state = State.HookshotThrown;
+                    speedLinesParticleSystem.transform.position = this.transform.position;
+                }
+            }
+        }
+
+        private void HandleHookshotThrow()
+        {
+            hookshotTransform.LookAt(hookshotPosition);
+
+            hookshotSize += hookshotThrowSpeed * Time.deltaTime;
+            hookshotTransform.localScale = new Vector3(1, 1, hookshotSize);
+
+            if (hookshotSize >= Vector3.Distance(transform.position, hookshotPosition))
+            {
+                state = State.HookshotFlyingPlayer;
+                SetCameraFov(HOOKSHOT_FOV);
+                speedLinesParticleSystem.Play();
+            }
+        }
+
+        private void HandleHookshotMovement()
+        {
+            hookshotTransform.LookAt(hookshotPosition);
+            Vector3 hookshotDir = (hookshotPosition - transform.position).normalized;
+
+            float hookshotSpeedMin = 10f;
+            float hookshotSpeedMax = 50f;
+            float hookshotSpeed = Mathf.Clamp(Vector3.Distance(transform.position, hookshotPosition), hookshotSpeedMin, hookshotSpeedMax);
+
+
+            //Move Character Controller
+            m_Controller.Move(hookshotDir * hookshotSpeed * hookshotSpeedMultiplier * Time.deltaTime);
+
+            float readHookshotPositionDistance = 1f;
+            if (Vector3.Distance(transform.position, hookshotPosition) < readHookshotPositionDistance)
+            {
+                //Read Hookshot position
+                StopHookshot();
+            }
+
+            if (TestInputDownHookshot())
+            {
+                //Cancel Hookshot
+                StopHookshot();
+            }
+
+            if (TestInputJump())
+            {
+                //Cancelled with Jump             
+                //m_CharacterVelocityMomentum = hookshotSpeed * m_MomentumExtraSpeed * hookshotDir;
+                float hookJumpSpeed = 1.015f;
+                float hookJumpForwardSpeed = 35f;
+                m_CharacterVelocityMomentum += (Vector3.up * hookJumpSpeed) + (this.transform.forward * hookJumpForwardSpeed);
+                StopHookshot();
+            }
+        }
+
+        private void StopHookshot()
+        {
+            state = State.Normal;
+            ResetGravityEffect();
+            hookshotTransform.gameObject.SetActive(false);
+            SetCameraFov(NORMAL_FOV);
+            speedLinesParticleSystem.Stop();
+        }
+
+        private bool TestInputDownHookshot()
+        {
+            return Input.GetKeyDown(KeyCode.F);
+        }
+
+        private bool TestInputJump()
+        {
+            return m_InputHandler.GetJumpInputDown();
+        }
+
+        private void CameraMovement()
+        {
+            // horizontal character rotation
+            {
+                // rotate the transform with the input speed around its local Y axis
+                transform.Rotate(
+                    new Vector3(0f, (m_InputHandler.GetLookInputsHorizontal() * RotationSpeed * RotationMultiplier),
+                        0f), Space.Self);
+            }
+
+            // vertical camera rotation
+            {
+                // add vertical inputs to the camera's vertical angle
+                m_CameraVerticalAngle += m_InputHandler.GetLookInputsVertical() * RotationSpeed * RotationMultiplier;
+
+                // limit the camera's vertical angle to min/max
+                m_CameraVerticalAngle = Mathf.Clamp(m_CameraVerticalAngle, -89f, 89f);
+
+                // apply the vertical angle as a local rotation to the camera transform along its right axis (makes it pivot up and down)
+                PlayerCamera.transform.localEulerAngles = new Vector3(m_CameraVerticalAngle, 0, 0);
+            }
+        }
+
+        public void SetCameraFov(float targetFov)
+        {
+            this.targetFov = targetFov;
+        }
     }
+
 }
