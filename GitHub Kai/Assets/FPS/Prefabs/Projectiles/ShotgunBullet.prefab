@@ -90,7 +90,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   Speed: 300
   GravityDownAcceleration: 0
-  TrajectoryCorrectionDistance: 5
+  TrajectoryCorrectionDistance: 10
   InheritWeaponVelocity: 0
   Damage: 5
   AreaOfDamage: {fileID: 0}
@@ -115,32 +115,32 @@ PrefabInstance:
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.2116055
+      value: 6.266137
       objectReference: {fileID: 0}
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.2116055
+      value: 6.266137
       objectReference: {fileID: 0}
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.2116055
+      value: 6.266137
       objectReference: {fileID: 0}
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0000000014957
+      value: 0.000000046425
       objectReference: {fileID: 0}
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0000000020315
+      value: -0.000000046811
       objectReference: {fileID: 0}
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.00033804
+      value: -0.000093549
       objectReference: {fileID: 0}
     - target: {fileID: 2148876437425421443, guid: 52222831c750bc54ab02e8b95280e006,
         type: 3}
