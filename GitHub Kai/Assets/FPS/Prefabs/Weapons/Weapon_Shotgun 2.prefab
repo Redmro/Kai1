@@ -155,7 +155,7 @@ MonoBehaviour:
   WeaponRoot: {fileID: 5606739737956196649}
   WeaponMuzzle: {fileID: 7540458851223246475}
   ShootType: 0
-  ProjectilePrefab: {fileID: 7473531487456241463, guid: 0c5764d2015dd3a498330485e5417d64,
+  ProjectilePrefab: {fileID: 7473531487456241463, guid: 83d2ad2c2e782454d922f1391b7fe7cc,
     type: 3}
   DelayBetweenShots: 0.4
   BulletSpreadAngle: 5
@@ -178,9 +178,10 @@ MonoBehaviour:
   AmmoUsedOnStartCharge: 1
   AmmoUsageRateWhileCharging: 1
   WeaponAnimator: {fileID: 0}
-  MuzzleFlashPrefab: {fileID: 0}
+  MuzzleFlashPrefab: {fileID: 1782395880954752, guid: 05a6d8b4bbc899342aa2c57534ad969f,
+    type: 3}
   UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 8300000, guid: 03f8dfe8ec9e56643a5e2e5f4da1304d, type: 3}
+  ShootSfx: {fileID: 8300000, guid: f83270a8266b79643acce850afa1bf39, type: 3}
   ChangeWeaponSfx: {fileID: 0}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}
@@ -410,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7468492209781060870}
   m_LocalRotation: {x: -0, y: 0.70710695, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.076, y: 0.02, z: 0}
+  m_LocalPosition: {x: 1.206, y: 0.0253, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 198719912503724044}
   - component: {fileID: 199226664080650972}
   m_Layer: 0
-  m_Name: MuzzleFlash
+  m_Name: Shotgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1782395880954752}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.057541}
-  m_LocalScale: {x: 1.822, y: 1.822, z: 1.822}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.07861438, y: 0.07861438, z: 0.07861438}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4615767745696060}
@@ -49,7 +49,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4851,8 +4851,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845643716156742}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0.14}
-  m_LocalScale: {x: 3.12295, y: 3.5651598, z: 5.2933397}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 23.707043, y: 27.063963, z: 40.18298}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4977485751071522}
