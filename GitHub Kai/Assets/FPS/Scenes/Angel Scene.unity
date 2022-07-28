@@ -332,7 +332,7 @@ PrefabInstance:
     - target: {fileID: 1491290725929217554, guid: b30a53312927b31418602a1885fa013e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 200
+      value: 157.24
       objectReference: {fileID: 0}
     - target: {fileID: 1491290725929217554, guid: b30a53312927b31418602a1885fa013e,
         type: 3}
@@ -378,7 +378,7 @@ PrefabInstance:
         type: 3}
       propertyPath: StartingWeapons.Array.data[0]
       value: 
-      objectReference: {fileID: 958623517967530291, guid: 8e2c4aefe0d2464448f48127f64f5d87,
+      objectReference: {fileID: 3496952618824857796, guid: 64b25b3c806a37642bd8437f816bfe5d,
         type: 3}
     - target: {fileID: 7912913030387480581, guid: b30a53312927b31418602a1885fa013e,
         type: 3}
