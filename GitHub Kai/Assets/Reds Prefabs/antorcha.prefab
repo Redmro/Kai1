@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 1010187647215211186}
   - component: {fileID: 1010187647215211185}
   m_Layer: 0
-  m_Name: Point light (8)
+  m_Name: Flare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
