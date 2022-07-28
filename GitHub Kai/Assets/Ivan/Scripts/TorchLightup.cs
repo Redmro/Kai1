@@ -8,38 +8,46 @@ public class TorchLightup : MonoBehaviour
 {
     CapsuleCollider capsuleCollider;
     AudioSource audioSource;
-    GameObject fire;
-    GameObject flare;
+    public GameObject fire;
+    public GameObject flare;
+
+    private bool isFireActive;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
         audioSource = GetComponent<AudioSource>();
-        fire = GameObject.Find("FIRE 1");
-        flare = GameObject.Find("Flare");
+    }
+
+     void Start()
+    {
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (MouseButtonDown())
-        {
-           capsuleCollider.gameObject.SetActive(true);
+        MouseButtonDown();
+        if (isFireActive)
+        {           
            fire.gameObject.SetActive(true);
            flare.gameObject.SetActive(true);
         }
 
         else {
-              capsuleCollider.gameObject.SetActive(false);
-              fire.gameObject.SetActive(true);
-              flare.gameObject.SetActive(true);
+              
+              fire.gameObject.SetActive(false);
+              flare.gameObject.SetActive(false);
              }    
     }
 
-    private bool MouseButtonDown()
+    private void MouseButtonDown()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            return Input.GetMouseButtonDown (0);
+            isFireActive = !isFireActive;
         }
+     }
 }
