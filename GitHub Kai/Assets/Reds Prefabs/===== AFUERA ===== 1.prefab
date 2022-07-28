@@ -2091,7 +2091,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4953794772222346229}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.934755, y: 31, z: -25.212626}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3576,10 +3576,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4953794772222346226}
     m_Modifications:
+    - target: {fileID: 3648715531288085916, guid: b61432c4247617a43ab3b60a839519b4,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648715531288085916, guid: b61432c4247617a43ab3b60a839519b4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648715531288085916, guid: b61432c4247617a43ab3b60a839519b4,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.3
+      objectReference: {fileID: 0}
     - target: {fileID: 3648715532678373318, guid: b61432c4247617a43ab3b60a839519b4,
         type: 3}
       propertyPath: m_Name
       value: Rain
+      objectReference: {fileID: 0}
+    - target: {fileID: 3648715532678373318, guid: b61432c4247617a43ab3b60a839519b4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3648715532678373319, guid: b61432c4247617a43ab3b60a839519b4,
         type: 3}
@@ -3609,7 +3629,7 @@ PrefabInstance:
     - target: {fileID: 3648715532678373319, guid: b61432c4247617a43ab3b60a839519b4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -72.13422
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3648715532678373319, guid: b61432c4247617a43ab3b60a839519b4,
         type: 3}
