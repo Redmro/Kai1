@@ -189,8 +189,8 @@ namespace Unity.FPS.Gameplay
         private const float NORMAL_FOV = 60f;
         private const float HOOKSHOT_FOV = 100f;
 
-        [Header("Rupies")]
-        public int rupies =0;
+        [Header("Crystals")]
+        public int rupies = 1;
 
         private enum State
         {

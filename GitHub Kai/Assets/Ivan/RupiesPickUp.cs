@@ -70,7 +70,7 @@ namespace Unity.FPS.Gameplay
         protected virtual void OnPicked(PlayerCharacterController playerController)
         {
             PlayPickupFeedback();
-            player.rupies += 1;
+            playerController.rupies += 1;
         }
 
         public void PlayPickupFeedback()
