@@ -23,6 +23,9 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Once an object is in the hand, save it to this variable")]
         public Transform heldObject;
 
+        [Tooltip("Once an object is selected, save it to this variable")]
+        public Transform pushableObject;
+
         [Tooltip("The distance threshold in which the object is considered pulled to the hand")]
         public float positionDistanceThreshold;
 
@@ -56,6 +59,28 @@ namespace Unity.FPS.Gameplay
                 }
             }
 
+            RaycastHit hitPush;
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                if (Physics.Raycast(transform.position, transform.forward, out hitPush))
+                {                    
+                    if (hitPush.transform.tag.Equals(pullableTag))
+                    {
+                        PushObject(hitPush.transform);
+                        pushableObject.transform.parent = null;
+                        pushableObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                        pushableObject.GetComponent<Rigidbody>().velocity = transform.forward * throwVelocity;
+                        pushableObject = null;
+                    }
+                }
+            }
+
+            void PushObject(Transform p)
+            {
+                Rigidbody rb = p.GetComponent<Rigidbody>();
+                pushableObject = p;
+            }
+
             /*
                 If the player clicks the right mouse button do the following:
                 1) make it's parent be nothing
@@ -82,7 +107,7 @@ namespace Unity.FPS.Gameplay
             {
 
                 //  If the player right-clicks, stop pulling
-                if (Input.GetKeyDown(KeyCode.G))
+                if (Input.GetKeyDown(KeyCode.T))
                 {                    
                     break;
                 }

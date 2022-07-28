@@ -2379,6 +2379,7 @@ MonoBehaviour:
   pullableTag: Pullable
   modifier: 15
   heldObject: {fileID: 0}
+  pushableObject: {fileID: 742087806}
   positionDistanceThreshold: 0.1
   velocityDistanceThreshold: 2
   maxVelocity: 10
@@ -4325,6 +4326,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!4 &742087806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 64769212955432257, guid: dff0de17bd1ea9f4781cc2f4b94fecf8,
+    type: 3}
+  m_PrefabInstance: {fileID: 64769213429397258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &759815506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2141676431450117668, guid: cd17687759887a0438ee021e51abc9d9,
