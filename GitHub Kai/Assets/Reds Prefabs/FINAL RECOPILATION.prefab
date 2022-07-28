@@ -404,6 +404,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===== AFUERA ===== (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99923944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.038994927
+      objectReference: {fileID: 0}
+    - target: {fileID: 6377943470292096072, guid: 50ba17766b80159439d7b3ca7c59be54,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 4.47
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50ba17766b80159439d7b3ca7c59be54, type: 3}
 --- !u!4 &2511065984313780235 stripped
