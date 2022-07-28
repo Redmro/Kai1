@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3440132, g: 0.09567595, b: 0.104028046, a: 1}
+  m_IndirectSpecularColor: {r: 0.34404823, g: 0.09565599, b: 0.10394842, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2690,7 +2690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashCoolDown: {fileID: 329150207}
   rupiesCollected: {fileID: 1061107854}
-  rupiesInLevel: 15
+  rupiesInLevel: 0
 --- !u!114 &329150207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3329473363692058336, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
@@ -3709,8 +3709,28 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
+      propertyPath: rupies
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: crystals
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
       propertyPath: dashCooldown
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: dashDuration
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 814417836257332542, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
@@ -8748,10 +8768,20 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3329473363692058336, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
         type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329473363692058336, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
+        type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
         type: 2}
+    - target: {fileID: 3329473363692058336, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3329473363692058336, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
         type: 3}
       propertyPath: m_sharedMaterial
@@ -8850,7 +8880,7 @@ PrefabInstance:
     - target: {fileID: 3329473363692058343, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 52.250008
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3329473363692058343, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
         type: 3}
@@ -10421,7 +10451,12 @@ PrefabInstance:
     - target: {fileID: 7188801726275845704, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
       propertyPath: m_text
-      value: 'Rupies Collected:'
+      value: 'Crystals Collected:'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7188801726275845704, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7188801726275845704, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
@@ -10429,6 +10464,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
         type: 2}
+    - target: {fileID: 7188801726275845704, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7188801726275845704, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
       propertyPath: m_sharedMaterial
@@ -10477,7 +10517,7 @@ PrefabInstance:
     - target: {fileID: 7188801726275845707, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 322.7313
+      value: 371.877
       objectReference: {fileID: 0}
     - target: {fileID: 7188801726275845707, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
@@ -10522,12 +10562,12 @@ PrefabInstance:
     - target: {fileID: 7188801726275845707, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -169.84546
+      value: -160.63063
       objectReference: {fileID: 0}
     - target: {fileID: 7188801726275845707, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69.999985
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 7188801726275845707, guid: 20fcd0e7e7cbf5242ac116881a4f1a3b,
         type: 3}

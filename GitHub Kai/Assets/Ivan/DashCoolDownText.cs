@@ -19,6 +19,6 @@ public class DashCoolDownText : MonoBehaviour
     void Update()
     {
         dashCoolDown.text = "Dash Cooldown: " + Mathf.Round(player.dashCooldown);
-        rupiesCollected.text = "Rupies Collected: " + player.rupies + " / " + rupiesInLevel;
+        rupiesCollected.text = "Crystals Collected: " + player.rupies + " / " + rupiesInLevel;
     }
 }
