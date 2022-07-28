@@ -1599,6 +1599,16 @@ PrefabInstance:
       propertyPath: pushableObject
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4525945563176668178, guid: be06aa914688405478229c4ffde3b8df,
+        type: 3}
+      propertyPath: RotationSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4525945563176668178, guid: be06aa914688405478229c4ffde3b8df,
+        type: 3}
+      propertyPath: MaxSpeedOnGround
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5539557619115267897, guid: be06aa914688405478229c4ffde3b8df,
         type: 3}
       propertyPath: m_RootOrder
