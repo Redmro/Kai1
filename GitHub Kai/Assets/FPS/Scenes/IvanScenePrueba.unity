@@ -534,6 +534,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.26
       objectReference: {fileID: 0}
+    - target: {fileID: 6990140854487881249, guid: 3d5d8ca307612df40884add14b69f5b3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990140854487881250, guid: 3d5d8ca307612df40884add14b69f5b3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7647546300927873132, guid: 3d5d8ca307612df40884add14b69f5b3,
         type: 3}
       propertyPath: m_Range
@@ -636,7 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashCoolDown: {fileID: 329150207}
   rupiesCollected: {fileID: 1061107854}
-  rupiesInLevel: 0
+  rupiesInLevel: 35
 --- !u!114 &329150207 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3329473363692058336, guid: 40ac81d0fe5f233498fba7c0d8a2cfd6,
@@ -684,12 +694,12 @@ PrefabInstance:
     - target: {fileID: 5391986374566301942, guid: eaace838128ad014dabe26547201a014,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.72
+      value: 6.21
       objectReference: {fileID: 0}
     - target: {fileID: 5391986374566301942, guid: eaace838128ad014dabe26547201a014,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.495968
+      value: 23.69
       objectReference: {fileID: 0}
     - target: {fileID: 5391986374566301942, guid: eaace838128ad014dabe26547201a014,
         type: 3}
