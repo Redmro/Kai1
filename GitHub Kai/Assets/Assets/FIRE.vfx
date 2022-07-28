@@ -524,7 +524,7 @@ MonoBehaviour:
   - {fileID: 8926484042661614583}
   - {fileID: 8926484042661614585}
   dataType: 0
-  capacity: 256
+  capacity: 150
   stripCapacity: 16
   particlePerStripCount: 16
   needsComputeBounds: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEditor.VFX.Vector, Unity.VisualEffectGraph.Editor,
           Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"vector":{"x":-1.1399999856948853,"y":0.18000000715255738,"z":6.539999961853027}}'
+      m_SerializableObject: '{"vector":{"x":-1.149999976158142,"y":-1.5,"z":6.539999961853027}}'
     m_Space: 0
   m_Property:
     name: A
@@ -951,7 +951,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 1
+      m_SerializableObject: 0.25
     m_Space: 2147483647
   m_Property:
     name: A
@@ -985,7 +985,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 2
+      m_SerializableObject: 1
     m_Space: 2147483647
   m_Property:
     name: B
@@ -1332,7 +1332,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.5,"y":0.5,"z":0.5}'
+      m_SerializableObject: '{"x":1.0,"y":0.5,"z":1.0}'
     m_Space: 2147483647
   m_Property:
     name: boundsPadding
