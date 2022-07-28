@@ -123,6 +123,456 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &13806809
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 44.58556
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.081524
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.93007797
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.36736232
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -43.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &13806810 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 13806809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &39927638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.19831
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -33.713444
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &39927639 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 39927638}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &215684712
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.408
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &215684713 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 215684712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &644127415
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 45.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.81686723
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5768258
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 70.455
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &644127416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 644127415}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &894691532
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91659653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3998134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -47.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &894691533 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 894691532}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &982677902
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,6 +688,456 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+--- !u!1001 &1346876261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -31.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91659653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3998134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -47.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &1346876262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1346876261}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1424922746
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.6207
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172548
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -35.777
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &1424922747 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1424922746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1451421619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 52.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91659653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3998134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -47.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &1451421620 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451421619}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1634356667
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 60.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.194997
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3587121
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.93344826
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 137.958
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &1634356668 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1634356667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1733957311
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5886490820928730919}
+    m_Modifications:
+    - target: {fileID: 1914107619258735128, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_Name
+      value: Crystal Stone collectable (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7601439
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.52423716
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.9355096
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.172546
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.91659653
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3998134
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -47.133
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36da0b55dad0c1f4e87e0e1d4555c13e, type: 3}
+--- !u!4 &1733957312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1914107619259090488, guid: 36da0b55dad0c1f4e87e0e1d4555c13e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1733957311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2096178227
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +1266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5886490820928730919}
   m_Layer: 0
-  m_Name: ===== LEVEL 5  PUSH_ PULL =====
+  m_Name: Gem Crystal Collectables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -383,7 +1283,17 @@ Transform:
   m_LocalPosition: {x: -113.94, y: -2.4079, z: 43.138}
   m_LocalScale: {x: 3.3069, y: 3.3069, z: 3.3069}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 39927639}
+  - {fileID: 13806810}
+  - {fileID: 1424922747}
+  - {fileID: 1733957312}
+  - {fileID: 644127416}
+  - {fileID: 215684713}
+  - {fileID: 1634356668}
+  - {fileID: 1451421620}
+  - {fileID: 894691533}
+  - {fileID: 1346876262}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -394,6 +1304,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1607491002423771942, guid: 3d5d8ca307612df40884add14b69f5b3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.041
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607491002423771942, guid: 3d5d8ca307612df40884add14b69f5b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 2403189026832240371, guid: 3d5d8ca307612df40884add14b69f5b3,
         type: 3}
       propertyPath: m_RootOrder
